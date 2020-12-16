@@ -18,7 +18,7 @@ public class RunnableClass {
         jamesSheppard.height = "6'2\"";
         jamesSheppard.weight = "185";
 
-        System.out.println(jamesSheppard);
+        System.out.println(jamesSheppard.getInfo());
 
         Human elonMusk = new Human();
 
@@ -27,7 +27,15 @@ public class RunnableClass {
         elonMusk.height = "6'1\"";
         elonMusk.weight = "190";
 
-        System.out.println(elonMusk);
+        System.out.println(elonMusk.getInfo());
 
+        Human humanFemale = new Human();
+
+        humanFemale.eyeColour = "brown";
+        humanFemale.gender = "female";
+        humanFemale.height = "5'5\"";
+        humanFemale.weight = "130";
+
+        System.out.println(humanFemale.getInfo());
     }
 }
