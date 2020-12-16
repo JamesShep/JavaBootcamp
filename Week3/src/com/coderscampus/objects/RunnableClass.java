@@ -13,5 +13,21 @@ public class RunnableClass {
 
         Human jamesSheppard = new Human();
 
+        jamesSheppard.eyeColour = "hazel";
+        jamesSheppard.gender = "male";
+        jamesSheppard.height = "6'2\"";
+        jamesSheppard.weight = "185";
+
+        System.out.println(jamesSheppard);
+
+        Human elonMusk = new Human();
+
+        elonMusk.eyeColour = "blue";
+        elonMusk.gender = "male";
+        elonMusk.height = "6'1\"";
+        elonMusk.weight = "190";
+
+        System.out.println(elonMusk);
+
     }
 }
