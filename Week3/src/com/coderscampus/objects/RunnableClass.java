@@ -1,5 +1,7 @@
 package com.coderscampus.objects;
 
+import java.util.Random;
+
 public class RunnableClass {
 
     public static void main (String [] args) {
@@ -9,7 +11,11 @@ public class RunnableClass {
 
         //Data type, variable name, variable name, assignment operation
 
-        int someNumber = 39;
+        Random random = new Random();
+
+        for (int i = 0; i < 20; i++) {
+            System.out.println("Random number is: " + (random.nextInt(10)+1));
+        }
 
         Human jamesSheppard = new Human();
 
@@ -23,10 +29,10 @@ public class RunnableClass {
 
         System.out.println(elonMusk.getInfo());
 
-        Human radhaTurner = new Human();
+        Human humanFemale = new Human();
 
-        radhaTurner.setProperties("female", "5'5\"", "55", "brown");
+        humanFemale.setProperties("female", "5'5\"", "55", "brown");
 
-        System.out.println(radhaTurner.getInfo());
+        System.out.println(humanFemale.getInfo());
     }
 }

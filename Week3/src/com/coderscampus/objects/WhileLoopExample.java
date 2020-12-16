@@ -28,7 +28,5 @@ public class WhileLoopExample {
             System.out.println(i + ": " + now);
             now = new Date();
         }
-
     }
-
 }
