@@ -1,6 +1,8 @@
-package com.coderscampus.lesson1;
+package com.coderscampus.lesson1.phys;
 
-public class PhysicsTeacher extends Teacher{
+import com.coderscampus.lesson1.Teacher;
+
+public class PhysicsTeacher extends Teacher {
 
     public PhysicsTeacher () {
         System.out.println("Inside the PhysicsTeacher constructor");

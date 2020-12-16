@@ -1,9 +1,25 @@
 package com.coderscampus.lesson1;
 
+import com.coderscampus.lesson1.compsci.CompSciTeacher;
+import com.coderscampus.lesson1.phys.PhysicsTeacher;
+import com.coderscampus.lesson1.qphy.QuantumPhysicsTeacher;
+
 public class Lesson1Application {
+
+    /**Access modifiers in Java are public, protected, package, private
+    public - method can be accessed anywhere
+    private - method can only be accessed from that class
+    protected - method can only be accessed from that classes hierarchy
+    package - accessible to the package only
+     */
 
     public static void main(String[] args) {
         Teacher physicsTeacher = new PhysicsTeacher();
+
+        PackageAccessModifierExample example = new PackageAccessModifierExample();
+
+        System.out.println(example.someValue);
+        System.out.println("-------------");
 
         //PhysicsTeacher castedPhysicsTeacher = (PhysicsTeacher)physicsTeacher;
 
@@ -13,7 +29,9 @@ public class Lesson1Application {
         // ((PhysicsTeacher)physicsTeacher).teach("James Sheppard");
         //castedPhysicsTeacher.teach("James Sheppard");
 
-        ((PhysicsTeacher)physicsTeacher).teach("James Sheppard"); // Single line cast
+        //((PhysicsTeacher)physicsTeacher).teach("James Sheppard"); // Single line cast
+        ((PhysicsTeacher)physicsTeacher).markPapers();
+                // Physics teacher is part of teacher. So should have access to protected classes
 
         System.out.println("------");
 

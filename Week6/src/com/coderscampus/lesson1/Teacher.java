@@ -4,6 +4,13 @@ public class Teacher {
     private String classes;
     private String levelOfEduction;
 
+    protected int totalNumberOfMarkedPapers;
+
+    // Can only be accessed to someone who can 'mark papers' (teachers)
+    protected void markPapers () {
+        System.out.println("I am a teacher, and I'm now marking papers.");
+    }
+
     private void getARaise () {
         System.out.println("Teacher gets a raise!");
     }
