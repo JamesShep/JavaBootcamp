@@ -13,4 +13,12 @@ public class Human {
         return "Gender: " + gender + ", Height: " + height + ", Weight: " +
                 weight + ", Eye Colour: " + eyeColour;
     }
+
+    void setProperties (String gender, String height, String weight, String eyeColour) {
+
+        this.gender = gender;
+        this.height = height;
+        this.weight = weight;
+        this.eyeColour = eyeColour;
+    }
 }
