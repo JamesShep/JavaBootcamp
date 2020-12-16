@@ -4,14 +4,14 @@ public class Loops {
 
     public static void main (String [] args) {
 
-        //initialisation, termination condition, increment
+        /*ForLoopExample forExample1 = new ForLoopExample();
+        forExample1.forLoopExample1();*/
 
-        for (int i = 0; i <= 10; i++) {
-            System.out.print(i + ": ");
-            System.out.println(i);
-        }
+        /*WhileLoopExample whileExample1 = new WhileLoopExample();
+        whileExample1.whileLoopExample1();*/
 
-        System.out.println("Done!");
+        WhileLoopExample whileExample2 = new WhileLoopExample();
+        whileExample2.whileLoopExample2();
+
     }
-
 }
