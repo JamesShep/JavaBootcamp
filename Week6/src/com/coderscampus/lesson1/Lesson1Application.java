@@ -7,7 +7,7 @@ public class Lesson1Application {
 
         System.out.println(physicsTeacher.getClasses());
         System.out.println(physicsTeacher.getLevelOfEduction());
-        physicsTeacher.teach();
+        physicsTeacher.teach("James Sheppard");
         System.out.println("------");
 
         CompSciTeacher compSciTeacher = new CompSciTeacher();

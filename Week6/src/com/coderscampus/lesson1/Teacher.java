@@ -12,6 +12,10 @@ public class Teacher {
         System.out.println("I'm a teacher and I'm now teaching");
     }
 
+    public void teach(String teacherName) {
+        System.out.println("I'm a teacher called " + teacherName + " and I'm now teaching physics");
+    }
+
 
     public Teacher () {
         System.out.println("Inside the Teacher constructor");
