@@ -8,4 +8,8 @@ public class PhysicsTeacher extends Teacher{
         this.setLevelOfEduction("Masters of Science");
     }
 
+    public void teach() {
+        System.out.println("I'm a physics teacher and I'm now teaching physics");
+    }
+
 }
