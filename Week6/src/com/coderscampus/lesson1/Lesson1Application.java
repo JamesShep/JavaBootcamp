@@ -3,6 +3,7 @@ package com.coderscampus.lesson1;
 import com.coderscampus.lesson1.compsci.CompSciTeacher;
 import com.coderscampus.lesson1.phys.PhysicsTeacher;
 import com.coderscampus.lesson1.qphy.QuantumPhysicsTeacher;
+import com.coderscampus.lesson6.PackageAccessModifierExample;
 
 public class Lesson1Application {
 
