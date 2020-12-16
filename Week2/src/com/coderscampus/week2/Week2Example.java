@@ -6,15 +6,19 @@ public class Week2Example {
 
         int age = 19;
 
-        if(age >= 18)
-        {
+        if(age >= 18) {
             System.out.println("You are an adult!");
         }
-        else
-        {
-            System.out.println("You are NOT an adult!");
+        else if (age >= 13) {
+            System.out.println("You are a teenager");
         }
+        else if (age == 12) {
+            System.out.println("You are a pre-teen");
+        }
+        else {
+            System.out.println("You are a child");
 
+        }
         System.out.println("Your age is " + age);
     }
 
