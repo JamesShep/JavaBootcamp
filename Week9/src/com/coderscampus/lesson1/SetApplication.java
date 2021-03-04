@@ -33,7 +33,7 @@ public class SetApplication {
     private static void example1() {
         Set<Integer> uniqueNumbers = new LinkedHashSet<>();
 
-        // LinkedHashset maintains order, HashSet does not
+        // LinkedHashset maintains order, HasSet does not
 
         System.out.println(uniqueNumbers.add(1));
         System.out.println(uniqueNumbers.add(2));
