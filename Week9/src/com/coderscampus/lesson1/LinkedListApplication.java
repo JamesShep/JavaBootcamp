@@ -14,7 +14,7 @@ public class LinkedListApplication {
         // Tail = 0          <-> Tail (0)  <-> Tail(0)  <-> Tail(1)
         // Data itself (10)  <-> (20)      <-> (30)     <-> (40)
 
-        // ********              Head(0)      ********      Head(0)
+        // ********              Head(1)      ********      Head(0)
         // ********          *** Tail (0)  <--------------> Tail(1)
         // ********              (20)         ********      (40)
 
@@ -30,7 +30,6 @@ public class LinkedListApplication {
 
         numbers.remove((Integer)30);
         printListToConsole(numbers);
-
 
     }
 
