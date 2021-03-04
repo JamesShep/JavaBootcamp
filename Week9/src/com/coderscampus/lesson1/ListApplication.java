@@ -38,8 +38,6 @@ public class ListApplication {
         System.out.println("List Example: ");
         printArrayListToConsole(elements);
 
-        System.out.println("");
-
         elements.remove(1);
 
         elements.remove("Trudy Hamilton");
@@ -51,6 +49,7 @@ public class ListApplication {
         for (String element : elements) {
             System.out.println(element);
         }
+        System.out.println("");
     }
 
 }
