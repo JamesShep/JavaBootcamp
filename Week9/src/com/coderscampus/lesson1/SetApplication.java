@@ -9,9 +9,31 @@ public class SetApplication {
 
     public static void main(String[] args) {
 
+        Set<Person> people = new HashSet<>();
+        people.add(new Person(111111111, "James", "Sheppard"));
+        people.add(new Person(111111111, "James", "Sheppard"));
+        people.add(new Person(111111112, "James", "Sheppard"));
+
+        for (Person  person : people) {
+            System.out.println(person);
+        }
+
+        // example1();
+    }
+
+
+
+    private static void printSetToConsole(Set<Integer> elements) {
+        for (Integer element : elements) {
+            System.out.println(element);
+        }
+        System.out.println("");
+    }
+
+    private static void example1() {
         Set<Integer> uniqueNumbers = new LinkedHashSet<>();
 
-        // LinkedHashset maintains order, HasSet does not
+        // LinkedHashset maintains order, HashSet does not
 
         System.out.println(uniqueNumbers.add(1));
         System.out.println(uniqueNumbers.add(2));
@@ -30,13 +52,6 @@ public class SetApplication {
         uniqueNames.add("Peter Herbert");
 
         for ( String element : uniqueNames) {
-            System.out.println(element);
-        }
-        System.out.println("");
-    }
-
-    private static void printSetToConsole(Set<Integer> elements) {
-        for (Integer element : elements) {
             System.out.println(element);
         }
         System.out.println("");

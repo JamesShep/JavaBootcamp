@@ -20,12 +20,20 @@ public class MapApplication {
         people.put(333333333, "Elon Musk");
         people.put(444444444, "Jeff Bezos");
         people.put(555555555, "Alyssa Vance");
+        people.put(555555555, "Alex Peterson");
 
         System.out.println("Get data using an invalid key: ");
         System.out.println(people.get(123456789));
 
         System.out.println("Get data using a valid key: ");
         System.out.println(people.get(333333333));
+
+        System.out.println("Get data using a valid key: ");
+        System.out.println(people.get(555555555));
+
+        people.remove(555555555);
+        System.out.println("Get data with a deleted key: ");
+        System.out.println(people.get(555555555));
 
     }
 
