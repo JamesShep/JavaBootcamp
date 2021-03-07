@@ -43,7 +43,7 @@ public class Recipe {
     }
 
     private String getPrice() {
-        String priceString = priceOpt.map(price -> "Price = " + price)
+        String priceString = priceOpt.map(price -> "Price = $" + price)
                 .orElse("Price = free");
         return priceString;
     }
