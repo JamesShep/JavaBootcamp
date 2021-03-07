@@ -38,7 +38,13 @@ public class Recipe {
         return "Recipe" +
                 "\nName: " + name +
                 "\nInstructions: " + instructions +
-                "\nPriceOpt:" + priceOpt
+                "\n" + getPrice()
                 ;
+    }
+
+    private String getPrice() {
+        String priceString = priceOpt.map(price -> "Price = " + price)
+                .orElse("Price = free");
+        return priceString;
     }
 }
