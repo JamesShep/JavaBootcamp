@@ -25,7 +25,7 @@ public class MultiThreadingApp {
         // For a CPU bound operation like we have in our "SomeTask" class,
         // we should make use of an ExecutorService
 
-        ExecutorService service = Executors.newFixedThreadPool(4);
+        ExecutorService service = Executors.newCachedThreadPool();
 
         for (int i=0; i<50; i++) {
             service.execute(new SomeTask());
