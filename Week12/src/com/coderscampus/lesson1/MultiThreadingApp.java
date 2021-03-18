@@ -1,11 +1,13 @@
 package com.coderscampus.lesson1;
 
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class MultiThreadingApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         String message = "Starting";
         System.out.println(message);
@@ -25,10 +27,13 @@ public class MultiThreadingApp {
         // For a CPU bound operation like we have in our "SomeTask" class,
         // we should make use of an ExecutorService
 
-        ExecutorService service = Executors.newCachedThreadPool();
+        ExecutorService service = Executors.newSingleThreadExecutor();
 
         for (int i=0; i<50; i++) {
-            service.execute(new SomeTask());
+            Future<TaskDto> futureTask = service.submit(new SomeTask());
+            System.out.println(futureTask.get());
+            // is a blocking task / call to the get method
+            // going to stop and wait for the future task/wrapper, for the value
         }
 
         message = "Done";
