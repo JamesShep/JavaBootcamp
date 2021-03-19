@@ -8,7 +8,7 @@ public class SomeTask implements Callable<TaskDto> {
     private static int taskId = 0;
 
     @Override
-    public TaskDto call() throws Exception {
+    public TaskDto call() {
         TaskDto taskDto = new TaskDto();
         for (int i = 0; i < 10000000; i++) {
             Integer int1 = new Random().nextInt();
