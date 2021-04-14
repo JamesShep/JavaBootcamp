@@ -4,6 +4,7 @@ import com.coderscampus.week13.domain.User;
 import com.coderscampus.week13.service.FileService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,6 +30,7 @@ public class FileController {
     private FileService fileService;
 
     @Autowired
+    @Qualifier("superUser")
     private User user;
 
     @GetMapping("/customer-report")

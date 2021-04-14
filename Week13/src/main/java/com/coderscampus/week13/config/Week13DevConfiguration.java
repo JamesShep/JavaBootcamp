@@ -6,8 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import javax.sql.DataSource;
-
 @Configuration
 @Profile("dev")
 public class Week13DevConfiguration {
@@ -29,8 +27,13 @@ public class Week13DevConfiguration {
     }
 
     @Bean
-    public User user () {
+    public User superUser () {
         return new User("JamesTest@gmail.com", "1234", "James S");
+    }
+
+    @Bean
+    public User regularUser () {
+        return new User("regular@gmail.com", "4321", "Joe Blo");
     }
 
 }
