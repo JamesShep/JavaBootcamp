@@ -2,13 +2,14 @@ package com.coderscampus.week13.config;
 
 import com.coderscampus.week13.domain.User;
 import com.coderscampus.week13.service.FileService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
-public class Week13Configuration {
+@Profile("qa")
+public class Week13QaConfiguration {
 
     // example of a real world type of connecting to a database
 
@@ -21,6 +22,15 @@ public class Week13Configuration {
         return db;
     }*/
 
+    @Value("${superuser.username}")
+    private String username;
+
+    @Value("${superuser.password}")
+    private String password;
+
+    @Value("${superuser.name}")
+    private String name;
+
     @Bean
     public FileService fileService() {
         return new FileService("test.txt");
@@ -28,7 +38,7 @@ public class Week13Configuration {
 
     @Bean
     public User user () {
-        return new User("James.Shep4@gmail.com", "1234", "James S");
+        return new User(username, password, name);
     }
 
 }

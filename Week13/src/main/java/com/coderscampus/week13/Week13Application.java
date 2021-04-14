@@ -11,6 +11,9 @@ public class Week13Application {
 	public static void main(String[] args) {
 
 		SpringApplication.run(Week13Application.class, args);
+
+		// To view JVM profiles settings > edit config
+		// -Dspring.profiles.active=dev
 	}
 
 }
