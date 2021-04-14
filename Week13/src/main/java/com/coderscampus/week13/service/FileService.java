@@ -9,12 +9,20 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-@Service
+//@Service
 //@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class FileService {
+    private String fileName;
 
-    public List<String> readFile (String filename) throws IOException {
-        return Files.readAllLines(Paths.get(filename));
+    public FileService() {
+    }
+
+    public FileService (String fileName) {
+        this.fileName = fileName;
+    }
+
+    public List<String> readFile () throws IOException {
+        return Files.readAllLines(Paths.get(fileName));
     }
 
 }
