@@ -1,4 +1,4 @@
-package com.coderscampus.week13;
+package com.coderscampus;
 
 import com.coderscampus.week13.domain.User;
 import com.coderscampus.week13.service.FileService;
