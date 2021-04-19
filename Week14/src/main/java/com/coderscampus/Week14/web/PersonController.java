@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonController {
 
     @PostMapping("/persons")
-    public Person createPerson (@RequestParam String name,
-            @RequestParam(required = false) String gender,
-            @RequestParam Integer age) {
+    public Person createPerson (@RequestParam String name, String gender, Integer age) {
         Person person = new Person();
         person.setName(name);
         person.setAge(age);
