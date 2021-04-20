@@ -15,6 +15,5 @@ public class PersonController {
         person.setAge(age);
         person.setGender(gender);
         return person;
-
     }
 }
