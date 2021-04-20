@@ -1,5 +1,6 @@
 package com.coderscampus.Week14.alphaadvantage;
 
+import com.coderscampus.Week14.alphaadvantage.dto.AlphaAdvantageResponse;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -23,7 +24,7 @@ public class AlphaAdvantageIntegration {
                                       .build()
                                       .toUri();
 
-        ResponseEntity<String> response = rt.getForEntity(uri, String.class);
-        System.out.println(response);
+        ResponseEntity<AlphaAdvantageResponse> response = rt.getForEntity(uri, AlphaAdvantageResponse.class);
+        System.out.println(response.getBody());
     }
 }
