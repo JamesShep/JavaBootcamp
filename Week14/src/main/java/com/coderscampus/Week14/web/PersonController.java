@@ -1,9 +1,7 @@
 package com.coderscampus.Week14.web;
 
 import com.coderscampus.Week14.dto.Person;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PersonController {
@@ -15,6 +13,14 @@ public class PersonController {
         person.setAge(age);
         person.setGender(gender);
         return person;
+    }
+
+    // fetches the person with ID 1
+    // http://localhost:8080/persons/1
+    @GetMapping("/persons/{personID}")
+    public Person getPerson (@PathVariable Long personId) {
+        System.out.println("Person ID is: " + personId);
+        return null;
 
     }
 }
