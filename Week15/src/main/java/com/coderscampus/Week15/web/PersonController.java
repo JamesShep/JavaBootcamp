@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class PersonController {
 
@@ -21,9 +23,12 @@ public class PersonController {
         // inside a regular controller GetMapping method
         // src / main / resources / templates / {filename}.html
 
+        List<Person> people = personService.findAll();
+
         Person person = new Person();
 
         model.put("person", person);
+        model.put("people", people);
 
         /*String firstName = "James";
         String lastName = "S";

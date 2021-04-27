@@ -6,6 +6,16 @@
     <body>
         <h1>Welcome</h1>
 
+        <div>
+            <div th:each="storedPerson : ${people}">
+                <span th:inline="text">
+                    Person #[[${storedPerson.id}]]: [[${storedPerson.firstName}]] [[${storedPerson.lastName}]]
+                </span>
+
+
+            </div>
+        </div>
+
         <form action="" method="post">
                 <input type ="hidden" th:field="${person.id}"/>
             <div>
