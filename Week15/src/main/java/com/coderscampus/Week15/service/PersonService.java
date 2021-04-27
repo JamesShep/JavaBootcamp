@@ -30,4 +30,8 @@ public class PersonService {
     public List<Person> findAll() {
         return personRepository.findAll();
     }
+
+    public void delete(Integer personId) {
+        personRepository.delete(personId);
+    }
 }
