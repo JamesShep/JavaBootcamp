@@ -46,4 +46,11 @@ public class PersonController {
         System.out.println(savedPerson);
         return "redirect:/persons";
     }
+
+    @PostMapping("/persons/{personId}")
+    public String postPerson (Person person) {
+        Person savedPerson = personService.save(person);
+        System.out.println(savedPerson);
+        return "redirect:/persons/" + savedPerson.getId();
+    }
 }
