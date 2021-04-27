@@ -6,9 +6,10 @@ package com.coderscampus.Week15.domain;
 
 public class Person {
 
+    private Integer Id;
     private String firstName;
     private String lastName;
-    private Integer Id;
+
 
     public String getFirstName() {
         return firstName;
@@ -37,9 +38,9 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "firstName='" + firstName + '\'' +
+                "Id=" + Id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", Id=" + Id +
                 '}';
     }
 }

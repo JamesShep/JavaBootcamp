@@ -18,4 +18,9 @@ public class PersonService {
         return personRepository.save(person);
     }
 
+    public Person findById(Integer personId) {
+        return personRepository.findById(personId);
+
+    }
+
 }
