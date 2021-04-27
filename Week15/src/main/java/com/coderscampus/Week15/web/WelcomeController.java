@@ -29,6 +29,6 @@ public class WelcomeController {
     @PostMapping("")
     public String postRootWebpage (Person person) {
         System.out.println(person);
-        return "welcome";
+        return "redirect:/";
     }
 }
