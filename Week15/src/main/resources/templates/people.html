@@ -9,7 +9,8 @@
         <div>
             <div th:each="storedPerson : ${people}">
                 <span th:inline="text">
-                    Person #[[${storedPerson.id}]]: [[${storedPerson.firstName}]] [[${storedPerson.lastName}]]
+                    Person #[[${storedPerson.id}]]: <a th:href="@{/persons/{personId}(personId=${storedPerson.id})}">
+                    [[${storedPerson.firstName}]] [[${storedPerson.lastName}]]</a>
                 </span>
 
 
@@ -28,6 +29,7 @@
                 <input type ="text" th:field="${person.lastName}"/>
             </div>
             <div>
+                <a href="/persons" th:if="${person.Id != null}">Back</a>
                 <button>Submit</button>
             </div>
 
