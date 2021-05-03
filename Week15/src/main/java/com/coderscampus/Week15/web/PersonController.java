@@ -42,7 +42,6 @@ public class PersonController {
         Person person = personService.findById(personId);
         model.put("person", person);
         return "people";
-
     }
 
     @PostMapping("/persons")
