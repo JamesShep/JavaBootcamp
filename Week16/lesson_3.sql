@@ -6,6 +6,7 @@ create table users (
     password varchar(32),
     first_name varchar(50),
     last_name varchar(50)
+    -- PRIMARY KEY (user_id)
 );
 
 CREATE TABLE `online_bank`.`transactions` (
