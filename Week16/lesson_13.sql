@@ -9,14 +9,14 @@ create table `address` (
   `address_line_1` varchar(200) not null,
   `address_line_2` varchar(200),
   `city` varchar(100),
-  `region` varchar(100),
+  `suburb` varchar(100),
   `country` varchar(100),
-  `zip_code` varchar(15),
+  `post_code` varchar(15),
   primary key (`user_id`),
   foreign key (`user_id`) references users (`user_id`)
 );
 
-insert into `address` (user_id, address_line_1, city, region, country, zip_code)
-values (1, '123 Fake St', 'Some City', 'Some Region', 'Some Country', '12345');
+insert into `address` (user_id, address_line_1, city, suburb, country, post_code)
+values (1, '123 Fake St', 'Some City', 'Some Suburb', 'Some Country', '1234');
 
 select * from address;
